@@ -1,6 +1,6 @@
 import { TableContainer } from './SensorInfoStyled';
-import SensorTableThead from './sensorTable/sensorTableThead';
-import SensorTableTbody from './sensorTable/sensorTableTbody';
+import SensorTableThead from './sensorTable/SensorTableThead';
+import SensorTableTbody from './sensorTable/SensorTableTbody';
 
 function SensorInfoTable(sensorData) {
   return (

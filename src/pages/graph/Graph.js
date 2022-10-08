@@ -71,8 +71,14 @@ const Graph = () => {
           {
             label: '',
             data: temp,
-            borderColor: 'rgba(39, 127, 242, 0.5)',
-            backgroundColor: 'rgba(39, 127, 242)',
+            borderColor: 'rgba(196,196,196, 0.6)',
+            backgroundColor: temp.map(tempEl =>
+              tempEl >= 30
+                ? '#f65446'
+                : tempEl >= 20
+                ? '#3cc926'
+                : 'rgb(39, 127, 242)',
+            ),
           },
         ],
       },
@@ -82,7 +88,7 @@ const Graph = () => {
           {
             label: '',
             data: humidity,
-            borderColor: 'rgba(39, 127, 242, 0.5)',
+            borderColor: 'rgba(196,196,196, 0.6)',
             backgroundColor: 'rgba(39, 127, 242)',
           },
         ],
@@ -93,7 +99,7 @@ const Graph = () => {
           {
             label: '',
             data: pressure,
-            borderColor: 'rgba(39, 127, 242, 0.5)',
+            borderColor: 'rgba(196,196,196, 0.6)',
             backgroundColor: 'rgba(39, 127, 242)',
           },
         ],

@@ -49,6 +49,11 @@ const CalendatContainer = styled.div`
     height: 500px;
     z-index: 100;
 
+    @media screen and (max-width: ${({ theme }) => theme.surfaceDuo}) {
+      width: 360px;
+      height: 410px;
+    }
+
     @media screen and (max-width: ${({ theme }) => theme.iPhoneXr}) {
       width: 350px;
       height: 400px;

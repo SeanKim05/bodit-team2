@@ -192,6 +192,9 @@ const Wrap = styled.div`
 
         span {
           cursor: pointer;
+          @media screen and (max-width: ${({ theme }) => theme.iPhoneXr}) {
+            display: none;
+          }
         }
         svg {
           margin-right: 5px;

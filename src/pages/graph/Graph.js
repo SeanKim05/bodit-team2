@@ -26,7 +26,6 @@ const Graph = () => {
   };
   const pickDay = moment(startDate).format('YYYY-MM-DD');
   const tommorow = moment(pickDay).add(1, 'd').format('YYYY-MM-DD');
-  console.log(pickDay, tommorow);
 
   useEffect(() => {
     fetch(
@@ -46,7 +45,7 @@ const Graph = () => {
           ),
         );
       });
-  }, []);
+  }, [pickDay]);
 
   ChartJS.register(
     CategoryScale,

@@ -170,6 +170,8 @@ const Wrap = styled.div`
       margin: 0 auto;
       color: #fff;
 
+      padding: 0 8px;
+
       .iconContainer {
         svg {
           cursor: pointer;

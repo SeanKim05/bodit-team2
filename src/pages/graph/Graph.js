@@ -105,18 +105,21 @@ const Graph = () => {
     <Wrap>
       <header>
         <div className="headerContainer">
-          <div className="iconContainer">
+          <div className="leftContainer">
             <FontAwesomeIcon icon={faPlus} size="2x" />
             <FontAwesomeIcon icon={faMinus} size="2x" />
           </div>
-          <p
-            className="calendar-box"
-            onClick={() => {
-              setModal(true);
-            }}
-          >
-            <FontAwesomeIcon icon={faCalendar} /> <span>{pickDay}</span>
-          </p>
+          <div className="rightContainer">
+            <button>EXPORT</button>
+            <p
+              className="calendar-box"
+              onClick={() => {
+                setModal(true);
+              }}
+            >
+              <FontAwesomeIcon icon={faCalendar} /> <span>{pickDay}</span>
+            </p>
+          </div>
         </div>
       </header>
       <MainContainer>
@@ -169,10 +172,9 @@ const Wrap = styled.div`
       align-items: center;
       margin: 0 auto;
       color: #fff;
-
       padding: 0 8px;
 
-      .iconContainer {
+      .leftContainer {
         svg {
           cursor: pointer;
           &:first-child {
@@ -183,24 +185,45 @@ const Wrap = styled.div`
           }
         }
       }
+      .rightContainer {
+        display: flex;
 
-      .calendar-box {
-        color: #fff;
-        font-size: 25px;
-        font-weight: 700;
-        &:active {
-          color: #d1d1d1;
-        }
+        button {
+          margin-right: 30px;
+          border: 2px solid #fff;
+          border-radius: 5px;
+          background-color: ${({ theme }) => theme.mainBlue};
+          color: #fff;
+          font-weight: 700;
+          font-size: 1rem;
 
-        span {
-          cursor: pointer;
-          @media screen and (max-width: ${({ theme }) => theme.iPhoneXr}) {
-            display: none;
+          span {
+            cursor: pointer;
+            @media screen and (max-width: ${({ theme }) => theme.iPhoneXr}) {
+              display: none;
+            }
+            &:active {
+              background-color: #fff;
+              color: ${({ theme }) => theme.mainBlue};
+            }
           }
-        }
-        svg {
-          margin-right: 5px;
-          cursor: pointer;
+
+          .calendar-box {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 700;
+            &:active {
+              color: #d1d1d1;
+            }
+
+            span {
+              cursor: pointer;
+            }
+            svg {
+              margin-right: 5px;
+              cursor: pointer;
+            }
+          }
         }
       }
     }

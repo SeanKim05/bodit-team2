@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/bodit-team2/static/css/main.746f1836.css",
-    "main.js": "/bodit-team2/static/js/main.1600bc2d.js",
+    "main.js": "/bodit-team2/static/js/main.ac495fc7.js",
     "index.html": "/bodit-team2/index.html",
     "main.746f1836.css.map": "/bodit-team2/static/css/main.746f1836.css.map",
-    "main.1600bc2d.js.map": "/bodit-team2/static/js/main.1600bc2d.js.map"
+    "main.ac495fc7.js.map": "/bodit-team2/static/js/main.ac495fc7.js.map"
   },
   "entrypoints": [
     "static/css/main.746f1836.css",
-    "static/js/main.1600bc2d.js"
+    "static/js/main.ac495fc7.js"
   ]
 }

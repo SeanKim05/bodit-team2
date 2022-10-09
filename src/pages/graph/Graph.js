@@ -234,8 +234,8 @@ export default Graph;
 const MainContainer = styled.main``;
 
 const CSVButton = styled(CSVLink)`
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   &:active {
     background-color: #fff;
     color: ${({ theme }) => theme.mainBlue};
@@ -257,15 +257,16 @@ const Wrap = styled.div`
     background-color: rgba(39, 127, 242);
 
     .headerContainer {
-      max-width: 1200px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1200px;
       margin: 0 auto;
-      color: #fff;
       padding: 0 8px;
+      color: #fff;
 
       .leftContainer {
+        display: flex;
         svg {
           cursor: pointer;
           &:first-child {
@@ -283,12 +284,17 @@ const Wrap = styled.div`
         align-items: center;
 
         button {
-          margin-right: 30px;
+          margin-right: 25px;
           border: 2px solid #fff;
           border-radius: 5px;
           background-color: ${({ theme }) => theme.mainBlue};
           font-weight: 700;
           font-size: 1rem;
+          transition: 500ms;
+
+          @media screen and (max-width: ${({ theme }) => theme.surfaceDuo}) {
+            margin-right: 15px;
+          }
           cursor: pointer;
           &:active {
             background-color: #fff;
@@ -319,12 +325,12 @@ const Wrap = styled.div`
   }
 
   ${MainContainer} {
+    width: 95%;
     max-width: 1200px;
-    width: 100%;
 
     .title {
-      text-align: center;
       margin-top: 100px;
+      text-align: center;
 
       &:first-child {
         margin-top: 150px;
@@ -336,10 +342,10 @@ const Wrap = styled.div`
         padding: 8px;
         background-color: #1c74e8;
         border-radius: 30px;
+        color: #fff;
         font-weight: 700;
         font-size: 20px;
         text-align: center;
-        color: #fff;
         box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
           0 1px 3px rgba(0, 0, 0, 0.08);
       }

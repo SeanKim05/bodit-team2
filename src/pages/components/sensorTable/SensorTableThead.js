@@ -1,4 +1,9 @@
-function SensoTableThead(sensorTable) {
+import BatteryFilter from './BatteryFilter';
+import CardFilter from './CardFilter';
+import FirmwareFilter from './FirmwareFIlter';
+import HardwareFilter from './HardwareFilter';
+
+function SensorTableThead(sensorTable) {
   return (
     <thead>
       <tr className="tableRow">
@@ -7,7 +12,11 @@ function SensoTableThead(sensorTable) {
           thingName
         </th>
         <th>
-          Bat.(%)
+          <BatteryFilter
+            id="batLvl"
+            setSensorData={sensorTable.setSensorData}
+            originalSensorData={sensorTable.originalSensorData}
+          />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
             id="batLvl"
@@ -28,7 +37,11 @@ function SensoTableThead(sensorTable) {
           Reason
         </th>
         <th>
-          Card No.
+          <CardFilter
+            id="connCardNum"
+            setSensorData={sensorTable.setSensorData}
+            originalSensorData={sensorTable.originalSensorData}
+          />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
             id="connCardNum"
@@ -49,7 +62,10 @@ function SensoTableThead(sensorTable) {
           RSSI
         </th>
         <th>
-          F/W ver.
+          <FirmwareFilter
+            setSensorData={sensorTable.setSensorData}
+            originalSensorData={sensorTable.originalSensorData}
+          />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
             id="fwVer"
@@ -58,7 +74,10 @@ function SensoTableThead(sensorTable) {
           />
         </th>
         <th>
-          H/W ver.
+          <HardwareFilter
+            setSensorData={sensorTable.setSensorData}
+            originalSensorData={sensorTable.originalSensorData}
+          />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
             id="hwVer"
@@ -71,4 +90,4 @@ function SensoTableThead(sensorTable) {
   );
 }
 
-export default SensoTableThead;
+export default SensorTableThead;

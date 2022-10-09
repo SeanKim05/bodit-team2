@@ -54,9 +54,9 @@ const DropdownList = styled.div`
   position: absolute;
   width: 55px;
   background-color: #fff;
-  border: 1px solid black;
 `;
 const DropdownItem = styled.div`
+  color: #000;
   font-size: 17px;
   cursor: pointer;
   :hover {

@@ -2,10 +2,11 @@ import BatteryFilter from './BatteryFilter';
 import CardFilter from './CardFilter';
 import FirmwareFilter from './FirmwareFIlter';
 import HardwareFilter from './HardwareFilter';
+import styled from 'styled-components';
 
 function SensorTableThead(sensorTable) {
   return (
-    <thead>
+    <StyledThead>
       <tr className="tableRow">
         <th>#</th>
         <th id="thingName" onClick={e => sensorTable.setSensorTableThead(e)}>
@@ -19,6 +20,7 @@ function SensorTableThead(sensorTable) {
           />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
+            alt="arrow-icon"
             id="batLvl"
             className="sortImg"
             onClick={e => sensorTable.setSensorTableThead(e)}
@@ -44,7 +46,8 @@ function SensorTableThead(sensorTable) {
           />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
-            id="connCardNum"
+            alt="arrow-icon"
+            id="batLvl"
             className="sortImg"
             onClick={e => sensorTable.setSensorTableThead(e)}
           />
@@ -68,7 +71,8 @@ function SensorTableThead(sensorTable) {
           />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
-            id="fwVer"
+            alt="arrow-icon"
+            id="batLvl"
             className="sortImg"
             onClick={e => sensorTable.setSensorTableThead(e)}
           />
@@ -80,14 +84,21 @@ function SensorTableThead(sensorTable) {
           />
           <img
             src={process.env.PUBLIC_URL + '/sort.png'}
-            id="hwVer"
+            alt="arrow-icon"
+            id="batLvl"
             className="sortImg"
             onClick={e => sensorTable.setSensorTableThead(e)}
           />
         </th>
       </tr>
-    </thead>
+    </StyledThead>
   );
 }
 
 export default SensorTableThead;
+
+const StyledThead = styled.thead`
+  color: #fff;
+  background-color: ${({ theme }) => theme.mainBlue};
+  border: none;
+`;

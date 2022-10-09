@@ -196,10 +196,10 @@ const Graph = () => {
                     </TransformComponent>
 
                     <button onClick={() => zoomIn()}>
-                      <FontAwesomeIcon icon={faPlus} size="2x" />
+                      <FontAwesomeIcon icon={faPlus} />
                     </button>
                     <button onClick={() => zoomOut()}>
-                      <FontAwesomeIcon icon={faMinus} size="2x" />
+                      <FontAwesomeIcon icon={faMinus} />
                     </button>
                   </>
                 )}

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import React from 'react';
-import styled from 'styled-components';
 import SensorInfoTable from './components/SensorInfoTable';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+import { faDove } from '@fortawesome/free-solid-svg-icons';
 
 function Main() {
   const [sensorData, setSensorData] = useState([]);
@@ -84,44 +84,40 @@ function Main() {
   }, []);
 
   return (
-    <MainContainer>
-      <button onClick={goGraph}>Go graph</button>
-      <MainWrapper>
+    <div>
+      <BtnContainer>
+        <ToGoGraphBtn onClick={goGraph}>GO GRAPH</ToGoGraphBtn>
+      </BtnContainer>
+      <div>
         <SensorInfoTable
           data={sensorData}
           setSensorData={setSensorData}
           originalSensorData={originalSensorData}
           setData={ColSort}
         />
-      </MainWrapper>
-    </MainContainer>
+      </div>
+    </div>
   );
 }
 
 export default Main;
 
-const MainContainer = styled.div`
-  /* width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #d3b9eb; */
+const BtnContainer = styled.div`
+  padding: 20px;
+  text-align: left;
+  background-color: ${({ theme }) => theme.mainBlue};
 `;
 
-const MainWrapper = styled.div`
-  /* width: 450px;
-  height: 600px;
-  background-color: white;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 20px;
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-  } */
+const ToGoGraphBtn = styled.button`
+  color: white;
+  margin-right: 1.563rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: ${({ theme }) => theme.mainBlue};
+  font-weight: 700;
+  font-size: 1rem;
+  &:active {
+    background-color: #fff;
+    color: ${({ theme }) => theme.mainBlue};
+  }
 `;

@@ -56,9 +56,9 @@ const DropdownBtn = styled.div`
 const DropdownList = styled.div`
   position: absolute;
   background-color: #fff;
-  border: 1px solid black;
 `;
 const DropdownItem = styled.div`
+  color: #000;
   cursor: pointer;
   :hover {
     color: gray;

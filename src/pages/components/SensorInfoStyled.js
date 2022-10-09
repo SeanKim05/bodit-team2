@@ -5,8 +5,6 @@ export const TableContainer = styled.div`
     width: 100%;
 
     .tableRow {
-      border: 0.063rem solid black;
-
       th {
         padding: 0.2rem 0.2rem;
         font-weight: 600;
@@ -25,7 +23,8 @@ export const TableContainer = styled.div`
     }
 
     tr.onHover {
-      background-color: grey;
+      background-color: rgba(65, 65, 65, 0.4);
+      color: #fff;
     }
     tr.onLeave {
       background-color: inherit;

@@ -1,8 +1,6 @@
 import React from 'react';
 import styledComponents from 'styled-components';
 
-function Test() {
-  return <>aaa</>;
-}
+function Test() {}
 
 export default Test;

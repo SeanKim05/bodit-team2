@@ -6,7 +6,7 @@ function SensorInfoTable(sensorData) {
   return (
     <TableContainer>
       <table className="sensorInfoTable">
-        <SensorTableThead />
+        <SensorTableThead SensorTableThead={sensorData} />
         <SensorTableTbody sensorTableBody={sensorData} />
       </table>
     </TableContainer>

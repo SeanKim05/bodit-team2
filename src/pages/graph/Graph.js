@@ -186,7 +186,7 @@ const Graph = () => {
               <h1 className="title">
                 <span>{i === 0 ? '기온' : i === 1 ? '습도' : '압력'}</span>
               </h1>
-              <TransformWrapper>
+              <TransformWrapper wheel={{ wheelDisabled: true }}>
                 {({ zoomIn, zoomOut }) => (
                   <>
                     <TransformComponent>

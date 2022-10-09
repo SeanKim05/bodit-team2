@@ -1,8 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 
 function SensorTableTbody(sensorTable) {
   const [hover, setHover] = useState(false);
-  const [batStatOk, setBatStatOk] = useState(false);
 
   const mouseHandler = e => (e === hover ? setHover(false) : setHover(e));
 

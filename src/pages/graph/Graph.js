@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Component } from 'react';
 import { CSVLink } from 'react-csv';
 import {
   Chart as ChartJS,
@@ -15,7 +15,7 @@ import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
-import zoomPlugin from 'chartjs-plugin-zoom';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 const Graph = () => {
   const [temp, setTemp] = useState();
@@ -63,7 +63,6 @@ const Graph = () => {
     PointElement,
     LineElement,
     Tooltip,
-    zoomPlugin,
   );
 
   let data;
@@ -86,21 +85,6 @@ const Graph = () => {
             ),
           },
         ],
-        options: {
-          plugins: {
-            zoom: {
-              zoom: {
-                wheel: {
-                  enabled: true,
-                },
-                pinch: {
-                  enabled: true,
-                },
-                mode: 'xy',
-              },
-            },
-          },
-        },
       },
       {
         labels: createdAt.map(time => time),
@@ -112,21 +96,6 @@ const Graph = () => {
             backgroundColor: 'rgba(39, 127, 242)',
           },
         ],
-        options: {
-          plugins: {
-            zoom: {
-              zoom: {
-                wheel: {
-                  enabled: true,
-                },
-                pinch: {
-                  enabled: true,
-                },
-                mode: 'xy',
-              },
-            },
-          },
-        },
       },
       {
         labels: createdAt.map(time => time),
@@ -217,9 +186,24 @@ const Graph = () => {
               <h1 className="title">
                 <span>{i === 0 ? '기온' : i === 1 ? '습도' : '압력'}</span>
               </h1>
-              <div className="graphBox">
-                <GraphBox data={dataEl} />
-              </div>
+              <TransformWrapper>
+                {({ zoomIn, zoomOut }) => (
+                  <>
+                    <TransformComponent>
+                      <div className="graphBox">
+                        <GraphBox data={dataEl} />
+                      </div>
+                    </TransformComponent>
+
+                    <button onClick={() => zoomIn()}>
+                      <FontAwesomeIcon icon={faPlus} size="2x" />
+                    </button>
+                    <button onClick={() => zoomOut()}>
+                      <FontAwesomeIcon icon={faMinus} size="2x" />
+                    </button>
+                  </>
+                )}
+              </TransformWrapper>
             </div>
           ))}
       </MainContainer>

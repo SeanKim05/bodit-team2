@@ -23,7 +23,7 @@ export const Wrap = styled.div`
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: rgba(39, 127, 242);
 
     .headerContainer {
@@ -40,7 +40,7 @@ export const Wrap = styled.div`
         svg {
           cursor: pointer;
           &:first-child {
-            margin-right: 10px;
+            margin-right: 0.625rem;
           }
           &:active {
             color: #d1d1d1;
@@ -54,7 +54,7 @@ export const Wrap = styled.div`
         align-items: center;
 
         button {
-          margin-right: 25px;
+          margin-right: 1.563rem;
           border: 2px solid #fff;
           border-radius: 5px;
           background-color: ${({ theme }) => theme.mainBlue};
@@ -63,7 +63,7 @@ export const Wrap = styled.div`
           transition: 500ms;
 
           @media screen and (max-width: ${({ theme }) => theme.surfaceDuo}) {
-            margin-right: 15px;
+            margin-right: 0.938rem;
           }
           cursor: pointer;
           &:active {
@@ -73,7 +73,7 @@ export const Wrap = styled.div`
         }
         .calendar-box {
           color: #fff;
-          font-size: 25px;
+          font-size: 1.563rem;
           font-weight: 700;
           &:active {
             color: #d1d1d1;
@@ -99,22 +99,22 @@ export const Wrap = styled.div`
     max-width: 1200px;
 
     .title {
-      margin-top: 100px;
+      margin-top: 6.25rem;
       text-align: center;
 
       &:first-child {
-        margin-top: 150px;
+        margin-top: 9.375rem;
       }
 
       span {
         display: inline-block;
-        width: 50px;
+        width: 3.125rem;
         padding: 8px;
         background-color: #1c74e8;
         border-radius: 30px;
         color: #fff;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 1.25rem;
         text-align: center;
         box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
           0 1px 3px rgba(0, 0, 0, 0.08);
@@ -122,10 +122,10 @@ export const Wrap = styled.div`
     }
 
     .graphBox {
-      margin-top: 20px;
-      margin-bottom: 50px;
-      padding: 30px;
-      border-radius: 20px;
+      margin-top: 1.25rem;
+      margin-bottom: 3.125rem;
+      padding: 1.875rem;
+      border-radius: 1.25rem;
       box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
         0 1px 3px rgba(0, 0, 0, 0.08);
     }
@@ -139,10 +139,10 @@ export const Wrap = styled.div`
       bottom: 0;
       left: 0;
       right: 0;
-      font-size: 40px;
+      font-size: 2.5rem;
 
       @media screen and (max-width: ${({ theme }) => theme.surfaceDuo}) {
-        font-size: 23px;
+        font-size: 1.438rem;
       }
     }
   }

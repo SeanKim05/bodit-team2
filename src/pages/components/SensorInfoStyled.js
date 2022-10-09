@@ -13,6 +13,11 @@ export const TableContainer = styled.div`
         font-size: 1.4rem;
         cursor: pointer;
       }
+
+      .sortImg {
+        margin-left: 0.125rem;
+        margin-top: 0.125rem;
+      }
     }
 
     .itemIndex {

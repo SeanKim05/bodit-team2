@@ -6,8 +6,14 @@ function SensoTableThead(sensorTable) {
         <th id="thingName" onClick={e => sensorTable.setSensorTableThead(e)}>
           thingName
         </th>
-        <th id="batLvl" onClick={e => sensorTable.setSensorTableThead(e)}>
+        <th>
           Bat.(%)
+          <img
+            src={process.env.PUBLIC_URL + '/sort.png'}
+            id="batLvl"
+            className="sortImg"
+            onClick={e => sensorTable.setSensorTableThead(e)}
+          />
         </th>
         <th id="connAt" onClick={e => sensorTable.setSensorTableThead(e)}>
           Connected at
@@ -21,8 +27,14 @@ function SensoTableThead(sensorTable) {
         >
           Reason
         </th>
-        <th id="connCardNum" onClick={e => sensorTable.setSensorTableThead(e)}>
+        <th>
           Card No.
+          <img
+            src={process.env.PUBLIC_URL + '/sort.png'}
+            id="connCardNum"
+            className="sortImg"
+            onClick={e => sensorTable.setSensorTableThead(e)}
+          />
         </th>
         <th id="connGW" onClick={e => sensorTable.setSensorTableThead(e)}>
           Gateway
@@ -36,11 +48,23 @@ function SensoTableThead(sensorTable) {
         <th id="rssi" onClick={e => sensorTable.setSensorTableThead(e)}>
           RSSI
         </th>
-        <th id="fwVer" onClick={e => sensorTable.setSensorTableThead(e)}>
+        <th>
           F/W ver.
+          <img
+            src={process.env.PUBLIC_URL + '/sort.png'}
+            id="fwVer"
+            className="sortImg"
+            onClick={e => sensorTable.setSensorTableThead(e)}
+          />
         </th>
-        <th id="hwVer" onClick={e => sensorTable.setSensorTableThead(e)}>
+        <th>
           H/W ver.
+          <img
+            src={process.env.PUBLIC_URL + '/sort.png'}
+            id="hwVer"
+            className="sortImg"
+            onClick={e => sensorTable.setSensorTableThead(e)}
+          />
         </th>
       </tr>
     </thead>

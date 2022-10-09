@@ -1,4 +1,3 @@
-import { CSVLink } from 'react-csv';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -9,6 +8,7 @@ import {
   LineElement,
   Tooltip,
 } from 'chart.js';
+import Zoom from 'chartjs-plugin-zoom';
 import GraphBox from './components/GraphBox';
 import ModalCalendar from './components/ModalCalendar';
 import moment from 'moment';
@@ -73,6 +73,7 @@ const Graph = () => {
     PointElement,
     LineElement,
     Tooltip,
+    Zoom,
   );
 
   let data;
@@ -105,7 +106,7 @@ const Graph = () => {
                 pinch: {
                   enabled: true,
                 },
-                mode: 'xy',
+                mode: 'x',
               },
             },
           },
@@ -131,7 +132,7 @@ const Graph = () => {
                 pinch: {
                   enabled: true,
                 },
-                mode: 'xy',
+                mode: 'x',
               },
             },
           },
@@ -157,7 +158,7 @@ const Graph = () => {
                 pinch: {
                   enabled: true,
                 },
-                mode: 'xy',
+                mode: 'x',
               },
             },
           },
